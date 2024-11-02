@@ -3,27 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitoMint - Health & Wellness</title>
+    <title>FitoMint - Health, Wellness & Lifestyle</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <script src="scripts/script.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="FitoMint Logo" class="logo"> <!-- Logo -->
+        <img src="images/logo.png" alt="FitoMint Logo" class="logo">
         <h1>Welcome to FitoMint</h1>
-        <p>Your go-to brand for health, wellness, and lifestyle.</p>
+        <p>Your journey to health and wellness starts here.</p>
     </header>
-    <section class="hero">
-        <img src="images/hero.jpg" alt="FitoMint Hero Image">
-        <blockquote>"Nurture your body, nourish your soul."</blockquote>
-    </section>
-    <nav>
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">FitoMint</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
+    
+    <section class="hero-banner">
+        <div>
+            <p>Empowering Your Journey to Wellness</p>
+            <a href="#about" class="cta-button">Discover More</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            FitoMint is a brand dedicated to promoting health, wellness, and a vibrant lifestyle. Founded on the belief that everyone deserves access to quality products that enhance their well-being, FitoMint strives to deliver innovative solutions that inspire healthy living. Our journey began with a passion for creating natural and effective products that empower individuals to take charge of their health. We prioritize sustainability, quality, and transparency in all our offerings, ensuring that every customer can trust the products they use. Join us on this journey towards a healthier, happier life!
+        </p>
+        <img src="images/about.jpg" alt="FitoMint Team" class="about-image">
+    </section>
+    
+
+    <section id="blog">
+        <h2>Blog/Resources</h2>
+        <p>Welcome to the FitoMint Blog! Here, we share insights, tips, and articles that focus on health, wellness, and lifestyle improvement. Our goal is to provide you with valuable information that can help you lead a healthier and more fulfilling life.</p>
+        <ul class="blog-list">
+            <li>
+                <h3><a href="path/to/article1.html">5 Simple Steps to a Healthier You</a></h3>
+                <p>Discover easy lifestyle changes that can have a big impact on your health.</p>
+            </li>
+            <li>
+                <h3><a href="path/to/article2.html">The Benefits of Mindfulness Meditation</a></h3>
+                <p>Learn how practicing mindfulness can improve your mental well-being.</p>
+            </li>
+            <li>
+                <h3><a href="path/to/article3.html">Nutritional Tips for a Balanced Diet</a></h3>
+                <p>Find out how to create a balanced diet that supports your health goals.</p>
+            </li>
+        </ul>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
 </body>
 </html>
