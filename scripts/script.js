@@ -18,3 +18,28 @@ mobileMenu.addEventListener('click', () => {
     console.log("clicked");
     // Toggle the active class
 });
+
+async function loadProducts() {
+    try {
+        const response = await fetch('products.json');
+        const products = await response.json();
+        const productContainer = document.getElementById('product-container');
+        
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
+
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.title}">
+                <h3>${product.title}</h3>
+                <a href="${product.affiliateLink}" target="_blank">Buy Now</a>
+            `;
+
+            productContainer.appendChild(productDiv);
+        });
+    } catch (error) {
+        console.error('Error loading products:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadProducts);
