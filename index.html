@@ -37,13 +37,15 @@
         </div>
     </section>
 
-    <section id="product-section">
+    <section id="product-section" class="animate">
         <h2>Our Products</h2>
-        <div id="product-container"></div>
+        <div id="product-container">
+            <!-- Product cards will load here -->
+        </div>
     </section>
     
 
-    <section id="about">
+    <section id="about" class="animate">
         <h2>About Us</h2>
         <p>
             FitoMint is a brand dedicated to promoting health, wellness, and a vibrant lifestyle. Founded on the belief that everyone deserves access to quality products that enhance their well-being, FitoMint strives to deliver innovative solutions that inspire healthy living. Our journey began with a passion for creating natural and effective products that empower individuals to take charge of their health. We prioritize sustainability, quality, and transparency in all our offerings, ensuring that every customer can trust the products they use. Join us on this journey towards a healthier, happier life!
@@ -52,7 +54,7 @@
     </section>
     
 
-    <section id="blog">
+    <section id="blog" class="animate">
         <h2>Blog/Resources</h2>
         <p>Welcome to the FitoMint Blog! Here, we share insights, tips, and articles that focus on health, wellness, and lifestyle improvement. Our goal is to provide you with valuable information that can help you lead a healthier and more fulfilling life.</p>
         <ul class="blog-list">
@@ -89,4 +91,24 @@
     </section>
 </body>
 <script src="scripts/script.js"></script>
+<script>
+    // Function to add scroll animations
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll('.animate');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-in');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        });
+
+        sections.forEach(section => observer.observe(section));
+    });
+</script>
+
 </html>

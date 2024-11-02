@@ -236,21 +236,101 @@ button:hover {
     }
 }
 
-
+/* Container to hold product cards in a row */
 #product-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Space between product cards */
+    justify-content: center; /* Center-align product cards */
 }
-
+/* Product Card Styling */
 .product {
-    width: 200px;
+    width: 250px;
+    border-radius: 15px;
     border: 1px solid #ddd;
-    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
     text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure spacing within the card */
+    height: 400px; /* Set a consistent height */
 }
 
+.product:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+/* Image Styling - Fixed height for uniformity */
 .product img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;     /* Image won’t exceed the container width */
+    max-height: 200px;    /* Image won’t exceed the container height */
+    width: auto;         /* Keeps original aspect ratio */
+    height: auto;        /* Keeps original aspect ratio */
+    object-fit: contain; /* Scales the image to fit within the container */
+}
+
+/* Title Styling */
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+    flex-grow: 1; /* Make title take up remaining space */
+}
+
+/* Container for Title and Button */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* "Buy Now" Button Styling */
+.product a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.product a:hover {
+    background-color: #ff9900;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Responsive Design: Stack product cards on smaller screens */
+@media (max-width: 768px) {
+    #product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
+
+/* Initial State - Hide with slight offset */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth fade-in */
+}
+
+/* Active State - Fade in and move up */
+.section.scroll-in {
+    opacity: 1;
+    transform: translateY(0);
 }

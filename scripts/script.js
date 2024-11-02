@@ -21,7 +21,7 @@ mobileMenu.addEventListener('click', () => {
 
 async function loadProducts() {
     try {
-        const response = await fetch('products.json');
+        const response = await fetch("./products.json");
         const products = await response.json();
         const productContainer = document.getElementById('product-container');
         
