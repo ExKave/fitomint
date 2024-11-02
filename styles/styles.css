@@ -1,54 +1,160 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark text color for readability */
 }
 
 header {
-    background: #f8f9fa;
-    padding: 20px;
+    background: linear-gradient(to right, #4caf50, #81c784); /* Gradient background */
+    color: white;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .logo {
-    max-width: 150px; /* Adjust size as needed */
+    max-width: 150px; /* Logo size */
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the logo */
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em; /* Increased font size for the main title */
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em; /* Increased paragraph font size */
+    margin-top: 10px;
 }
 
 .hero {
     position: relative;
     text-align: center;
+    margin: 20px 0;
 }
 
 .hero img {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* Rounded corners for images */
 }
 
-h1, h2, h3 {
-    color: #2b6cb0; /* Choose a vibrant color */
+blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    font-size: 1.5em; /* Increased font size for quotes */
+    color: #555; /* Slightly lighter color for quotes */
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+    position: sticky;
+    top: 0; /* Stick to the top on scroll */
+    z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centering navigation links */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px; /* Spacing between nav items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4caf50; /* Primary color for links */
+    font-weight: bold; /* Bold font for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #388e3c; /* Darker shade on hover */
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em; /* Adjusted font size for section titles */
+    margin: 20px 0;
+    color: #4caf50; /* Consistent brand color for headings */
 }
 
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin: auto;
+    margin: 20px auto; /* Centering the form */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for form */
 }
 
-label, input, textarea {
-    margin: 5px 0;
+label {
+    margin: 10px 0 5px; /* Spacing for labels */
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Standard font size for inputs */
+}
+
+input:focus, textarea:focus {
+    border-color: #4caf50; /* Highlight border color on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    background: #4caf50; /* Primary button color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Standard font size for button */
+    transition: background 0.3s; /* Smooth transition for button hover */
+}
+
+button:hover {
+    background: #388e3c; /* Darker button color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust header font size on smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduced margin for smaller screens */
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
 }
