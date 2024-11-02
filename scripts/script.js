@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('.nav-list');
+const navList = document.getElementById('nav-list');
 
 mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('active'); // Toggle the active class
+    navList.classList.toggle('active'); 
+    console.log("clicked");
+    // Toggle the active class
 });

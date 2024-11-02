@@ -77,7 +77,7 @@ blockquote {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .nav-list {
         position: absolute; /* Position the menu absolutely */
         right: 0; /* Align to the right */
