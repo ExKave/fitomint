@@ -32,6 +32,7 @@ async function loadProducts() {
             productDiv.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
                 <h3>${product.title}</h3>
+                 <p class="price">${product.price}</p>
                 <a href="${product.affiliateLink}" target="_blank">Buy Now</a>
             `;
 
